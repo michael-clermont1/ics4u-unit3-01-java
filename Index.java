@@ -30,11 +30,8 @@ final class Index {
         if (string.length() == 0) {
             return string;
         } else {
-            final String subString = string.substring(0, string.length() - 1);
-            reverseString(subString);
-
-            final char firstLetter = string.charAt(string.length() - 1);
-            return firstLetter + reverseString(subString);
+            return string.charAt(string.length() - 1)
+                    + reverseString(string.substring(0, string.length() - 1));
         }
     }
 
